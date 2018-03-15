@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.d("msg","Prueba de merge");
+        Log.d("msg","Prueba de merge TEPISO NURIA TEPISOO");
         setContentView(R.layout.activity_main);
     }
 }
