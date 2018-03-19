@@ -9,8 +9,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        Log.d("msg","Prueba de merge nurieta");
         setContentView(R.layout.activity_login);
     }
 }

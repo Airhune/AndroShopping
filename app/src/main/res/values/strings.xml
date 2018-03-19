@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">AndroShopping</string>
+    <string name="accept">Accept</string>
+    <string name="back">Back</string>
+    <string name="user">User</string>
+    <string name="autentication">Autentication</string>
+    <string name="userType">example@example.com</string>
+    <string name="password">Password</string>
+    <string name="passwordType">**********</string>
+    <string name="email">Email</string>
+    <string name="txt1">Text 1</string>
+    <string name="txt2">Text 2</string>
+    <string name="txt3">Text 3</string>
+    <string name="txtheader">HEADER</string>
+    <string name="button1">33%</string>
+    <string name="button2">66%</string>
+    <string name="button3">10%</string>
+    <string name="recover">Recover your password</string>
 </resources>
