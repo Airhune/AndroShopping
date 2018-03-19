@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroShopping.iml" filepath="$PROJECT_DIR$/AndroShopping.iml" />
+      <module fileurl="file://C:\Users\Nuria\Documents\GitHub\AndroShopping\AndroShopping.iml" filepath="C:\Users\Nuria\Documents\GitHub\AndroShopping\AndroShopping.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Nuria\Documents\GitHub\AndroShopping\app\app.iml" filepath="C:\Users\Nuria\Documents\GitHub\AndroShopping\app\app.iml" />
     </modules>
   </component>
 </project>
