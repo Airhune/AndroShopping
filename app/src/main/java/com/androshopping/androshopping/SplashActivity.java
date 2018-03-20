@@ -21,8 +21,8 @@ public class SplashActivity extends Activity {
             public void run() {
 
                 Intent mainIntent = new Intent(SplashActivity.this,LoginActivity.class);
-                SplashActivity.this.startActivity(mainIntent);
-                SplashActivity.this.finish();
+                startActivity(mainIntent);
+                finish();
             }
         }, delay);
     }

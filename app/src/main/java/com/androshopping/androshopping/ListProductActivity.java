@@ -1,8 +1,13 @@
 package com.androshopping.androshopping;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class ListProductActivity extends AppCompatActivity {
 
@@ -10,7 +15,42 @@ public class ListProductActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.d("msg","Prueba de merge nurieta");
         setContentView(R.layout.activity_listproduct);
+
+        Button viewButton = (Button)findViewById(R.id.viewProduct);
+        viewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), ViewProductActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        Button addButton = (Button)findViewById(R.id.addChart);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context context = getApplicationContext();
+                Toast toast = Toast.makeText(context, "Has comprado tal", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+
+
+        Button buyButton = (Button)findViewById(R.id.buyProducts);
+        buyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), ChartActivity.class);
+                startActivity(i);
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent setIntent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(setIntent);
     }
 }

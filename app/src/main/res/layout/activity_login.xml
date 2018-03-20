@@ -75,6 +75,7 @@
         android:textColorHint="@color/colorLightGrey"/>
 
     <Button
+        android:id="@+id/validateLogin"
         android:layout_width="150dp"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
