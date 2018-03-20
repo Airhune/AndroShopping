@@ -20,13 +20,13 @@
         <activity android:name=".LoginActivity">
         </activity>
 
-        <activity android:name=".ListProductActivity">
+        <activity android:name=".ListProductActivity" android:label="Buy">
         </activity>
 
-        <activity android:name=".ViewProductActivity">
+        <activity android:name=".ViewProductActivity" android:label="View Product">
         </activity>
 
-        <activity android:name=".ChartActivity">
+        <activity android:name=".ChartActivity" android:label="Chart resume">
         </activity>
     </application>
 
