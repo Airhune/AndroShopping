@@ -17,16 +17,35 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity">
+        <activity
+            android:name=".LoginActivity">
         </activity>
 
-        <activity android:name=".ListProductActivity" android:label="Buy">
+        <activity
+            android:name=".ListProductActivity"
+            android:label="Buy"
+            android:parentActivityName=".LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androshopping.androshopping.LoginActivity"/>
         </activity>
 
-        <activity android:name=".ViewProductActivity" android:label="View Product">
+        <activity
+            android:name=".ViewProductActivity"
+            android:label="View Product"
+            android:parentActivityName=".ListProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androshopping.androshopping.ListProductActivity"/>
         </activity>
 
-        <activity android:name=".ChartActivity" android:label="Chart resume">
+        <activity
+            android:name=".ChartActivity"
+            android:label="Chart resume"
+            android:parentActivityName=".ViewProductActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.androshopping.androshopping.ViewProductActivity"/>
         </activity>
     </application>
 
