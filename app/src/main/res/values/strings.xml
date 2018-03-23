@@ -12,7 +12,9 @@
     <string name="passwordType">**********</string>
     <string name="email">Email</string>
     <string name="recover">Recover your password</string>
-    <string name="euro"> €</string>
-    <string name="quantity">Q: </string>
-    <string name="totalPrice">Total price: </string>
+    <string name="euro">\u0020€</string>
+    <string name="quantity">\u0020\u0020Q:\u0020</string>
+    <string name="totalPrice">Total price:\u0020</string>
+    <string name="compraCompleta">Compra realizada correctamente</string>
+    <string name="bought">You bought a\u0020</string>
 </resources>

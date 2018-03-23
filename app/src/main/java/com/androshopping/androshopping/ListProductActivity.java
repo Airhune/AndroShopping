@@ -87,7 +87,7 @@ public class ListProductActivity extends AppCompatActivity {
         String [] names = getResources().getStringArray(R.array.productNames);
         int [] prices = getResources().getIntArray(R.array.productPrices);
         Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context, "You Bought a " + names[(int)view.getTag()], Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(context, getResources().getString(R.string.bought) + names[(int)view.getTag()], Toast.LENGTH_SHORT);
         toast.show();
         initializeChart();
         if (!((AndroShopping) this.getApplication()).chartList.searchItem(names[(int)view.getTag()])){

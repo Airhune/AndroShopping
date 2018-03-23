@@ -30,14 +30,14 @@ public class ChartActivity extends AppCompatActivity {
 
         TextView total = (TextView)findViewById(R.id.totalChart);
         int aux = ((AndroShopping) this.getApplication()).chartList.getTotalPrice();
-        total.setText("Total price: " + aux + " €");
+        total.setText(getResources().getString(R.string.totalPrice) + aux + getResources().getString(R.string.euro));
 
         Button finishButton = (Button)findViewById(R.id.finishChart);
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = getApplicationContext();
-                Toast toast = Toast.makeText(context, "Compra realizada correctamente", Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(context, R.string.compraCompleta, Toast.LENGTH_SHORT);
                 toast.show();
                 eraseList();
 

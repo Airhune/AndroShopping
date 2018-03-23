@@ -60,7 +60,7 @@ public class ChartItemAdapter extends ArrayAdapter<ChartItem> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
         if (row == null) {
-            Log.d("DEBUG", "Starting Row Inflation ... ");
+            //Log.d("DEBUG", "Starting Row Inflation ... ");
             LayoutInflater inflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(R.layout.chart_view_row, parent, false);
             row.setClickable(true);
@@ -69,7 +69,7 @@ public class ChartItemAdapter extends ArrayAdapter<ChartItem> {
                     //aqui puedes poner si quieres que haga algo cuando clicas la linea, no los botones.
                 }
             });
-            Log.d("DEBUG", "Successfully completed Row Inflation!");
+            //Log.d("DEBUG", "Successfully completed Row Inflation!");
         }
         // Get item
         String name = getItem(position).name;
@@ -82,12 +82,12 @@ public class ChartItemAdapter extends ArrayAdapter<ChartItem> {
         TextView productName = (TextView) row.findViewById(R.id.productName);
         productName.setText(name);
         TextView productPrice = (TextView) row.findViewById(R.id.productPrice);
-        productPrice.setText(price + " €");
+        productPrice.setText(price + getContext().getString(R.string.euro));
         TextView quantityText = (TextView) row.findViewById(R.id.productQuantity);
-        quantityText.setText("  Q: " + quantity);
+        quantityText.setText(getContext().getString(R.string.quantity) + quantity);
         TextView totalPrice = (TextView) row.findViewById(R.id.totalPrice);
         int aux = quantity * price;
-        totalPrice.setText(aux + " €");
+        totalPrice.setText(aux + getContext().getString(R.string.euro));
 
         //Set image
         ImageView chartImage = (ImageView) row.findViewById(R.id.chartImage);

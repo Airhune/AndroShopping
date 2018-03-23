@@ -53,7 +53,7 @@ public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
         if (row == null) {
-            Log.d("DEBUG", "Starting Row Inflation ... ");
+            //Log.d("DEBUG", "Starting Row Inflation ... ");
             LayoutInflater inflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(R.layout.list_view_row, parent, false);
             row.setClickable(true);
@@ -62,7 +62,7 @@ public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
                     //aqui puedes poner si quieres que haga algo cuando clicas la linea, no los botones.
                 }
             });
-            Log.d("DEBUG", "Successfully completed Row Inflation!");
+            //Log.d("DEBUG", "Successfully completed Row Inflation!");
         }
         // Get item
         String name = getItem(position).name;
@@ -73,7 +73,8 @@ public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
         TextView productName = (TextView) row.findViewById(R.id.productName);
         productName.setText(name);
         TextView productPrice = (TextView) row.findViewById(R.id.productPrice);
-        productPrice.setText(Integer.toString(price));
+        //context = getContext();
+        productPrice.setText(getContext().getString(R.string.totalPrice) + price + getContext().getString(R.string.euro));
 
         //Set button tags
         Button buyButton = (Button) row.findViewById(R.id.addChart);

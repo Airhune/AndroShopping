@@ -12,22 +12,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/productPriceText"
-        android:layout_toLeftOf="@id/productPrice"
-        android:text="@string/totalPrice"
-        android:textSize="20sp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/productPrice"
-        android:layout_toLeftOf="@id/productEuros"
-        android:textSize="20sp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/productEuros"
         android:layout_alignParentRight="true"
-        android:text="@string/euro"
         android:textSize="20sp"/>
     <Button
         android:id="@+id/viewProduct"
