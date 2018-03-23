@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ChartActivity extends AppCompatActivity {
@@ -22,6 +24,14 @@ public class ChartActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_chart);
 
+        ListView listView = (ListView) findViewById(R.id.listView);
+
+        listView.setAdapter(((AndroShopping) this.getApplication()).chartList);
+
+        TextView total = (TextView)findViewById(R.id.totalChart);
+        int aux = ((AndroShopping) this.getApplication()).chartList.getTotalPrice();
+        total.setText("Total price: " + aux + " €");
+
         Button finishButton = (Button)findViewById(R.id.finishChart);
         finishButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +39,7 @@ public class ChartActivity extends AppCompatActivity {
                 Context context = getApplicationContext();
                 Toast toast = Toast.makeText(context, "Compra realizada correctamente", Toast.LENGTH_SHORT);
                 toast.show();
+                eraseList();
 
                 Intent i = new Intent(getApplicationContext(), ListProductActivity.class);
                 startActivity(i);
@@ -48,5 +59,8 @@ public class ChartActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    public void eraseList(){
+        ((AndroShopping) this.getApplication()).chartList.clearList();
     }
 }

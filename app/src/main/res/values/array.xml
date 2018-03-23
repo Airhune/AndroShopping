@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name = "productNames">
+        <item>Xbox</item>
+        <item>Sony</item>
+        <item>Mac book pro</item>
+        <item>Acer P400</item>
+        <item>Nexus 4</item>
+        <item>iPad 4</item>
+    </string-array>
+    <array name = "productPrices">
+        <item>199</item>
+        <item>299</item>
+        <item>1990</item>
+        <item>399</item>
+        <item>200</item>
+        <item>399</item>
+    </array>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding = "24dp">
+    <ImageView
+        android:id="@+id/chartImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productName"
+        android:layout_toRightOf="@id/chartImage"
+        android:textSize="18sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productPrice"
+        android:layout_toRightOf="@id/chartImage"
+        android:layout_below="@id/productName"
+        android:textSize="18sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productQuantity"
+        android:layout_toRightOf="@id/productPrice"
+        android:layout_below="@id/productName"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalPrice"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/productName"
+        android:textSize="18sp"/>
+
+</RelativeLayout>

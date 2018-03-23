@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="32px">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productName"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productPriceText"
+        android:layout_toLeftOf="@id/productPrice"
+        android:text="@string/totalPrice"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productPrice"
+        android:layout_toLeftOf="@id/productEuros"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/productEuros"
+        android:layout_alignParentRight="true"
+        android:text="@string/euro"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/viewProduct"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/productName"
+        android:layout_alignParentLeft="true"
+        android:text="@string/view"
+        android:theme="@style/MyButton"
+        android:onClick="viewItemDetails"/>
+
+    <Button
+        android:id="@+id/addChart"
+        android:layout_width="150dp"
+        android:layout_below="@id/productPrice"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:text="@string/addChart"
+        android:theme="@style/MyButton"
+        android:onClick="addItemToChart"/>
+
+</RelativeLayout>

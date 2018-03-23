@@ -10,29 +10,18 @@
 
 
     <Button
-        android:id="@+id/viewProduct"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/view"
-        android:theme="@style/MyButton"/>
-
-    <Button
-        android:id="@+id/addChart"
-        android:layout_width="150dp"
-        android:layout_below="@id/viewProduct"
-        android:layout_height="48dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/addChart"
-        android:theme="@style/MyButton"/>
-
-    <Button
         android:id="@+id/buyProducts"
         android:layout_width="150dp"
-        android:layout_below="@id/addChart"
+        android:layout_alignParentBottom="true"
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
         android:text="@string/buy"
         android:theme="@style/MyButton"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp"></ListView>
 
 </RelativeLayout>
