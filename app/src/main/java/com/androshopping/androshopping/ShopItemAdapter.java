@@ -14,10 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import android.view.LayoutInflater;
 
-/**
- * Created by karlo on 22/03/2018.
- */
-
 public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
     /* ATRIBUTOS */
     private List<ShopItem> elements;

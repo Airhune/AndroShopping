@@ -12,9 +12,6 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by karlo on 23/03/2018.
- */
 
 public class ChartItemAdapter extends ArrayAdapter<ChartItem> {
     /* ATRIBUTOS */

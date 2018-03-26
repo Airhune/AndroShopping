@@ -16,4 +16,12 @@
         <item>200</item>
         <item>399</item>
     </array>
+    <string-array name = "productDescriptions">
+        <item>XboxDescription</item>
+        <item>SonyDescription</item>
+        <item>Mac book proDescription</item>
+        <item>Acer P400Description</item>
+        <item>Nexus 4Description</item>
+        <item>iPad 4Description</item>
+    </string-array>
 </resources>

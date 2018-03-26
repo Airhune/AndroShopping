@@ -24,6 +24,7 @@ public class ListProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listproduct);
 
         String [] names = getResources().getStringArray(R.array.productNames);
+        String [] descriptions = getResources().getStringArray(R.array.productDescriptions);
         int [] prices = getResources().getIntArray(R.array.productPrices);
 
         ShopItemAdapter adapter = new ShopItemAdapter(this, names, prices);
@@ -71,7 +72,14 @@ public class ListProductActivity extends AppCompatActivity {
 
     //Llama a los detalles del producto, hay que pasar la id/posicion del producto, esta en view.getTag()
     public void viewItemDetails(View view) {
+        String [] names = getResources().getStringArray(R.array.productNames);
+        String [] descriptions = getResources().getStringArray(R.array.productDescriptions);
+        int [] prices = getResources().getIntArray(R.array.productPrices);
+
         Intent i = new Intent(getApplicationContext(), ViewProductActivity.class);
+        i.putExtra("productName",names[(int) view.getTag()]);
+        i.putExtra("productDescription",descriptions[(int) view.getTag()]);
+        i.putExtra("productPrice",prices[(int) view.getTag()]);
         startActivity(i);
     }
 
@@ -82,7 +90,7 @@ public class ListProductActivity extends AppCompatActivity {
         }
     }
 
-    //Anade un item al chart, si es un item ya anadido solo augmenta la quantity
+    //Anade un item al chart, si es un item ya anadido solo aumenta la quantity
     public void addItemToChart(View view) {
         String [] names = getResources().getStringArray(R.array.productNames);
         int [] prices = getResources().getIntArray(R.array.productPrices);

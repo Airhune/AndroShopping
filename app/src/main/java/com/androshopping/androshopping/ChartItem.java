@@ -1,9 +1,5 @@
 package com.androshopping.androshopping;
 
-/**
- * Created by karlo on 23/03/2018.
- */
-
 public class ChartItem {
     public String name;
     public int price;

@@ -1,8 +1,5 @@
 package com.androshopping.androshopping;
 
-/**
- * Created by karlo on 22/03/2018.
- */
 
 public class ShopItem {
     public String name;
