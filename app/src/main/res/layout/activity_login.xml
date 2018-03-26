@@ -43,7 +43,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:theme="@style/MyEditText"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDarkGrey"
         android:textSize="18sp"
         android:hint="@string/userType"
         android:textColorHint="@color/colorLightGrey"/>
@@ -70,7 +70,7 @@
         android:inputType="textPassword"
         android:theme="@style/MyEditText"
         android:textSize="18sp"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorDarkGrey"
         android:hint="@string/passwordType"
         android:textColorHint="@color/colorLightGrey"/>
 
