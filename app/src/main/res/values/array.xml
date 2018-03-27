@@ -20,7 +20,9 @@
 
     <string-array name = "productDescriptions">
         <item>The Xbox 360 is a home video game console developed by Microsoft. As the successor to
-            the original Xbox, it is the second console in the Xbox series.</item>
+            the original Xbox, it is the second console in the Xbox series. It competed with Sonys
+            Playstation 3.
+        </item>
         <item>The Sony Xperia is an Android smartphone from Sony launched at the 2012 Consumer
             Electronics Show. It is the first Sony-only branded smartphone after Sony acquired
             Ericsson's.</item>
