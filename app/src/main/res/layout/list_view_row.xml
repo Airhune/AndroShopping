@@ -8,13 +8,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/productName"
         android:layout_alignParentLeft="true"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/productPrice"
         android:layout_alignParentRight="true"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <Button
         android:id="@+id/viewProduct"
         android:layout_width="150dp"
@@ -22,11 +22,13 @@
         android:layout_below="@id/productName"
         android:layout_alignParentLeft="true"
         android:text="@string/view"
+        android:layout_marginTop="10dp"
         android:theme="@style/MyButton"
         android:onClick="viewItemDetails"/>
 
     <Button
         android:id="@+id/addChart"
+        android:layout_marginTop="10dp"
         android:layout_width="150dp"
         android:layout_below="@id/productPrice"
         android:layout_height="48dp"

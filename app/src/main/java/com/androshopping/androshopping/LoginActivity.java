@@ -54,7 +54,7 @@ public class LoginActivity extends Activity {
             }
         }
         else{
-            showToastMessage("Invalid email.");
+            showToastMessage("Invalid format email.");
         }
         return false;
     }

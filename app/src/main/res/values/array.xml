@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name = "productNames">
-        <item>Xbox</item>
-        <item>Sony</item>
-        <item>Mac book pro</item>
+        <item>Xbox 360</item>
+        <item>Sony Xperia S</item>
+        <item>Macbook pro</item>
         <item>Acer P400</item>
         <item>Nexus 4</item>
         <item>iPad 4</item>
@@ -17,11 +17,20 @@
         <item>399</item>
     </array>
     <string-array name = "productDescriptions">
-        <item>XboxDescription</item>
-        <item>SonyDescription</item>
-        <item>Mac book proDescription</item>
-        <item>Acer P400Description</item>
-        <item>Nexus 4Description</item>
-        <item>iPad 4Description</item>
+        <item>The Xbox 360 is a home video game console developed by Microsoft. As the successor to
+            the original Xbox, it is the second console in the Xbox series.</item>
+        <item>The Sony Xperia is an Android smartphone from Sony launched at the 2012 Consumer
+            Electronics Show. It is the first Sony-only branded smartphone after Sony acquired
+            Ericsson's.</item>
+        <item>The MacBook Pro is a line of Macintosh portable computers introduced in January 2006
+            by Apple Inc. The MacBook Pro was the second model to be announced during the Apple–Intel
+            transition, after the iMac.</item>
+        <item>The Acer neoTouch P400 cell phone, launched in February 2010 by Acer, has among its
+            main specifications a TFT screen Resistive Touchscreen, 256K Colors, a resolution of
+            320x480 points, 3.2 inches with a weight of 125 grams.</item>
+        <item>The Nexus 4 is a smartphone co-developed by Google and LG Electronics that runs the
+            Android operating system. It is the fourth smartphone in the Google Nexus product family.</item>
+        <item>The iPad 4 is a tablet computer produced and marketed by Apple Inc. Compared to its predecessor,
+            the third-generation iPad, iPad 4 maintained the Retina Display.</item>
     </string-array>
 </resources>

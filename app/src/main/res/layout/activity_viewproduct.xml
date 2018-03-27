@@ -8,17 +8,16 @@
     android:orientation="vertical"
     tools:context="com.androshopping.androshopping.ChartActivity"
     android:theme="@style/AppThemeBar"
-    android:padding = "24dp"
-    >
+    android:padding = "24dp">
 
 
-        <TextView
-            android:id="@+id/basicInformation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="@string/basicInformationTitle"
-            android:layout_marginBottom="20dp"/>
+    <TextView
+        android:id="@+id/basicInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/basicInformationTitle"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:id="@+id/productName"

@@ -50,6 +50,7 @@ public class ListProductActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 
     @Override
