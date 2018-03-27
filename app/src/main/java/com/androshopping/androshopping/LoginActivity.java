@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.List;
+import java.util.Arrays;
 
 public class LoginActivity extends Activity {
 
@@ -45,9 +45,14 @@ public class LoginActivity extends Activity {
         EditText pw_field = (EditText) findViewById(R.id.pw_field);
         String pw = pw_field.getText().toString();
 
-        if(emailIsCorrect(email)){
-            if(passwordIsCorrect(pw)){
-                return true;
+        if(emailFormatIsCorrect(email)){
+            if(passwordFormatIsCorrect(pw)){
+                if(validUser(email,pw)){
+                    return true;
+                }
+                else{
+                    showToastMessage("Email and Password do not match.");
+                }
             }
             else{
                 showToastMessage("Password needs 6 digits at least.");
@@ -59,12 +64,26 @@ public class LoginActivity extends Activity {
         return false;
     }
 
-    public boolean emailIsCorrect(String email){
+    public boolean emailFormatIsCorrect(String email){
         return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
 
-    public boolean passwordIsCorrect(String pw){
+    public boolean passwordFormatIsCorrect(String pw){
         return (pw.length() >= 6);
+    }
+
+    public boolean validUser(String email, String pw){
+        String [] usersName = getResources().getStringArray(R.array.usersEmail);
+        //Check if the user is registered
+        if(Arrays.asList(usersName).contains(email)){
+            //if it is registered, check users index position on users array
+            int passwordIndex = Arrays.asList(usersName).indexOf(email);
+
+            //Compare password position with password introduced
+            String [] usersPassword = getResources().getStringArray(R.array.usersPassword);
+            return(usersPassword[passwordIndex].equals(pw));
+        }
+        return false;
     }
 
     public void showToastMessage(String message){

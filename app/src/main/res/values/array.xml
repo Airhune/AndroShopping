@@ -8,6 +8,7 @@
         <item>Nexus 4</item>
         <item>iPad 4</item>
     </string-array>
+
     <array name = "productPrices">
         <item>199</item>
         <item>299</item>
@@ -16,6 +17,7 @@
         <item>200</item>
         <item>399</item>
     </array>
+
     <string-array name = "productDescriptions">
         <item>The Xbox 360 is a home video game console developed by Microsoft. As the successor to
             the original Xbox, it is the second console in the Xbox series.</item>
@@ -33,4 +35,14 @@
         <item>The iPad 4 is a tablet computer produced and marketed by Apple Inc. Compared to its predecessor,
             the third-generation iPad, iPad 4 maintained the Retina Display.</item>
     </string-array>
+
+    <integer-array name="productImages">
+        <item>@drawable/product_xbox</item>
+        <item>@drawable/product_sony</item>
+        <item>@drawable/product_macbook</item>
+        <item>@drawable/product_acer</item>
+        <item>@drawable/product_nexus</item>
+        <item>@drawable/product_ipad</item>
+    </integer-array>
+
 </resources>
