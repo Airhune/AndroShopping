@@ -3,6 +3,7 @@ package com.androshopping.androshopping;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -76,11 +77,16 @@ public class ListProductActivity extends AppCompatActivity {
         String [] names = getResources().getStringArray(R.array.productNames);
         String [] descriptions = getResources().getStringArray(R.array.productDescriptions);
         int [] prices = getResources().getIntArray(R.array.productPrices);
+        TypedArray imgs = getResources().obtainTypedArray(R.array.productImages);
 
         Intent i = new Intent(getApplicationContext(), ViewProductActivity.class);
         i.putExtra("productName",names[(int) view.getTag()]);
         i.putExtra("productDescription",descriptions[(int) view.getTag()]);
         i.putExtra("productPrice",prices[(int) view.getTag()]);
+        i.putExtra("productImg",imgs.getResourceId((int)view.getTag(),0));
+        //To ensure TypedArray functionality
+        imgs.recycle();
+
         startActivity(i);
     }
 
@@ -95,12 +101,16 @@ public class ListProductActivity extends AppCompatActivity {
     public void addItemToChart(View view) {
         String [] names = getResources().getStringArray(R.array.productNames);
         int [] prices = getResources().getIntArray(R.array.productPrices);
+        TypedArray imgs = getResources().obtainTypedArray(R.array.productImages);
+
         Context context = getApplicationContext();
         Toast toast = Toast.makeText(context, getResources().getString(R.string.bought) + names[(int)view.getTag()], Toast.LENGTH_SHORT);
         toast.show();
         initializeChart();
         if (!((AndroShopping) this.getApplication()).chartList.searchItem(names[(int)view.getTag()])){
-            ((AndroShopping) this.getApplication()).chartList.addItem(new ChartItem(names[(int)view.getTag()], prices[(int)view.getTag()], R.mipmap.product_xbox));
+            ((AndroShopping) this.getApplication()).chartList.addItem(new ChartItem(names[(int)view.getTag()], prices[(int)view.getTag()], imgs.getResourceId((int)view.getTag(),0)));
+            //To ensure TypedArray functionality
+            imgs.recycle();
         }
 
     }
