@@ -100,7 +100,8 @@ public class ListProductActivity extends AppCompatActivity {
         toast.show();
         initializeChart();
         if (!((AndroShopping) this.getApplication()).chartList.searchItem(names[(int)view.getTag()])){
-            ((AndroShopping) this.getApplication()).chartList.addItem(new ChartItem(names[(int)view.getTag()], prices[(int)view.getTag()], R.mipmap.android_os));
+            ((AndroShopping) this.getApplication()).chartList.addItem(new ChartItem(names[(int)view.getTag()], prices[(int)view.getTag()], R.mipmap.product_xbox));
         }
+
     }
 }

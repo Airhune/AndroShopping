@@ -8,9 +8,24 @@
     android:orientation="vertical"
     tools:context="com.androshopping.androshopping.ChartActivity"
     android:theme="@style/AppThemeBar"
-    android:padding = "24dp">
+    android:padding = "0dp">
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:fillViewport="false"
+        android:layout_height="match_parent" >
 
-
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.androshopping.androshopping.ChartActivity"
+            android:theme="@style/AppThemeBar"
+            android:padding = "24dp">
     <TextView
         android:id="@+id/basicInformation"
         android:layout_width="wrap_content"
@@ -40,7 +55,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"
-        android:src="@mipmap/android_os"/>
+        android:src="@mipmap/android_os_mini"/>
 
     <View
         android:layout_height="0dp"
@@ -53,6 +68,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="@string/accept"/>
-
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
 
