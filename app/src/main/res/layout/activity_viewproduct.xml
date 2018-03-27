@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.androshopping.androshopping.ChartActivity"
-    android:theme="@style/AppThemeBar"
+    tools:context="com.androshopping.androshopping.ViewProductActivity"
     android:padding = "0dp">
     <ScrollView
         android:id="@+id/scrollView1"
@@ -18,57 +17,55 @@
 
         <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:context="com.androshopping.androshopping.ChartActivity"
-            android:theme="@style/AppThemeBar"
             android:padding = "24dp">
-    <TextView
-        android:id="@+id/basicInformation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="@string/basicInformationTitle"
-        android:layout_marginBottom="20dp"/>
 
-    <TextView
-        android:id="@+id/productName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="@string/accept"
-        android:layout_marginBottom="15dp"/>
+            <TextView
+                android:id="@+id/basicInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:text="@string/basicInformationTitle"
+                android:layout_marginBottom="20dp"/>
 
-    <TextView
-        android:id="@+id/productDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="@string/accept"/>
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/accept"
+                android:layout_marginBottom="15dp"/>
 
-    <ImageView
-        android:id="@+id/productImage"
-        android:layout_marginTop="100dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@mipmap/android_os_mini"/>
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/accept"/>
 
-    <View
-        android:layout_height="0dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_marginTop="20dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/android_os_mini"/>
 
-    <TextView
-        android:id="@+id/productPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="@string/accept"/>
-        </LinearLayout>
+            <View
+                android:layout_height="0dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/accept"/>
+                </LinearLayout>
     </ScrollView>
 </LinearLayout>
 

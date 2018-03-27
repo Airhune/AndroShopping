@@ -15,10 +15,6 @@ public class ViewProductActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.android_os_mini);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
-
         setContentView(R.layout.activity_viewproduct);
 
         Intent myIntent = getIntent();
@@ -39,17 +35,5 @@ public class ViewProductActivity extends AppCompatActivity {
         TextView productPriceText = (TextView) findViewById(R.id.productPrice);
         productPriceText.setText("Price: "+productPrice+"€");
 
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                // app icon action bar is clicked; go to parent activity
-                this.finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 }

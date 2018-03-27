@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -65,7 +66,8 @@ public class ListProductActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 // app icon action bar is clicked; go to parent activity
-                this.finish();
+//                this.finish();
+                NavUtils.navigateUpFromSameTask(this);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -113,5 +115,11 @@ public class ListProductActivity extends AppCompatActivity {
             imgs.recycle();
         }
 
+    }
+
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 }
