@@ -89,7 +89,6 @@ public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
                 initializeChart();
                 if (!((AndroShopping) getContext().getApplicationContext()).chartList.searchItem(names[(int)v.getTag()])){
                     ((AndroShopping) getContext().getApplicationContext()).chartList.addItem(new ChartItem(names[(int)v.getTag()], prices[(int)v.getTag()], imgs.getResourceId((int)v.getTag(),0)));
-                    //To ensure TypedArray functionality
                     imgs.recycle();
                 }
             }
@@ -98,18 +97,9 @@ public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
         viewButton.setTag(position);
         viewButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                String [] names = getContext().getResources().getStringArray(R.array.productNames);
-                String [] descriptions = getContext().getResources().getStringArray(R.array.productDescriptions);
-                int [] prices = getContext().getResources().getIntArray(R.array.productPrices);
-                TypedArray imgs = getContext().getResources().obtainTypedArray(R.array.productImages);
 
                 Intent i = new Intent(getContext().getApplicationContext(), ViewProductActivity.class);
-                i.putExtra("productName",names[(int) v.getTag()]);
-                i.putExtra("productDescription",descriptions[(int) v.getTag()]);
-                i.putExtra("productPrice",prices[(int) v.getTag()]);
-                i.putExtra("productImg",imgs.getResourceId((int)v.getTag(),0));
-                //To ensure TypedArray functionality
-                imgs.recycle();
+                i.putExtra("itemID",(int) v.getTag());
 
                 getContext().startActivity(i);
             }

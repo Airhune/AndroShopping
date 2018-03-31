@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.res.TypedArray;
 
 public class ViewProductActivity extends AppCompatActivity {
 
@@ -18,22 +19,25 @@ public class ViewProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_viewproduct);
 
         Intent myIntent = getIntent();
-        int productPrice = myIntent.getIntExtra("productPrice", 0);
-        String productName = myIntent.getStringExtra("productName");
-        String productDescription = myIntent.getStringExtra("productDescription");
-        int productImg = myIntent.getIntExtra("productImg", 0);
+        int itemID = myIntent.getIntExtra("itemID", -1);
+
+        String [] names = getResources().getStringArray(R.array.productNames);
+        String [] descriptions = getResources().getStringArray(R.array.productDescriptions);
+        int [] prices = getResources().getIntArray(R.array.productPrices);
+        TypedArray imgs = getResources().obtainTypedArray(R.array.productImages);
 
         TextView productNameText = (TextView) findViewById(R.id.productName);
-        productNameText.setText(productName);
+        productNameText.setText(names[itemID]);
 
         TextView productDescriptionText = (TextView) findViewById(R.id.productDescription);
-        productDescriptionText.setText(productDescription);
+        productDescriptionText.setText(descriptions[itemID]);
 
         ImageView productImgView = (ImageView) findViewById(R.id.productImage);
-        productImgView.setImageResource(productImg);
+        productImgView.setImageResource(imgs.getResourceId(itemID,0));
+        imgs.recycle();
 
         TextView productPriceText = (TextView) findViewById(R.id.productPrice);
-        productPriceText.setText("Price: "+productPrice+"€");
+        productPriceText.setText(getResources().getString(R.string.textPrice) + prices[itemID] + getResources().getString(R.string.euro));
 
     }
 }

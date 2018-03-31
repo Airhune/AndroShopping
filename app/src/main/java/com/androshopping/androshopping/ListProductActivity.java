@@ -74,47 +74,11 @@ public class ListProductActivity extends AppCompatActivity {
         }
     }
 
-    //Llama a los detalles del producto, hay que pasar la id/posicion del producto, esta en view.getTag()
-    public void viewItemDetails(View view) {
-        String [] names = getResources().getStringArray(R.array.productNames);
-        String [] descriptions = getResources().getStringArray(R.array.productDescriptions);
-        int [] prices = getResources().getIntArray(R.array.productPrices);
-        TypedArray imgs = getResources().obtainTypedArray(R.array.productImages);
-
-        Intent i = new Intent(getApplicationContext(), ViewProductActivity.class);
-        i.putExtra("productName",names[(int) view.getTag()]);
-        i.putExtra("productDescription",descriptions[(int) view.getTag()]);
-        i.putExtra("productPrice",prices[(int) view.getTag()]);
-        i.putExtra("productImg",imgs.getResourceId((int)view.getTag(),0));
-        //To ensure TypedArray functionality
-        imgs.recycle();
-
-        startActivity(i);
-    }
-
     //Inicializa la lista de la compra
     public void initializeChart(){
         if (((AndroShopping) this.getApplication()).chartList == null) {
             ((AndroShopping) this.getApplication()).chartList = new ChartItemAdapter(this);
         }
-    }
-
-    //Anade un item al chart, si es un item ya anadido solo aumenta la quantity
-    public void addItemToChart(View view) {
-        String [] names = getResources().getStringArray(R.array.productNames);
-        int [] prices = getResources().getIntArray(R.array.productPrices);
-        TypedArray imgs = getResources().obtainTypedArray(R.array.productImages);
-
-        Context context = getApplicationContext();
-        Toast toast = Toast.makeText(context, getResources().getString(R.string.bought) + names[(int)view.getTag()], Toast.LENGTH_SHORT);
-        toast.show();
-        initializeChart();
-        if (!((AndroShopping) this.getApplication()).chartList.searchItem(names[(int)view.getTag()])){
-            ((AndroShopping) this.getApplication()).chartList.addItem(new ChartItem(names[(int)view.getTag()], prices[(int)view.getTag()], imgs.getResourceId((int)view.getTag(),0)));
-            //To ensure TypedArray functionality
-            imgs.recycle();
-        }
-
     }
 
     @Override
