@@ -24,8 +24,7 @@
         android:layout_alignParentLeft="true"
         android:text="@string/view"
         android:layout_marginTop="10dp"
-        android:theme="@style/MyButton"
-        android:onClick="viewItemDetails"/>
+        android:theme="@style/MyButton" />
 
     <Button
         android:id="@+id/addChart"
@@ -35,7 +34,6 @@
         android:layout_height="48dp"
         android:layout_alignParentRight="true"
         android:text="@string/addChart"
-        android:theme="@style/MyButton"
-        android:onClick="addItemToChart"/>
+        android:theme="@style/MyButton" />
 
 </RelativeLayout>

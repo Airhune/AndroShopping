@@ -1,6 +1,7 @@
 package com.androshopping.androshopping;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -13,6 +14,7 @@ import android.content.Intent;
 import java.util.ArrayList;
 import java.util.List;
 import android.view.LayoutInflater;
+import android.widget.Toast;
 
 public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
     /* ATRIBUTOS */
@@ -75,8 +77,49 @@ public class ShopItemAdapter extends ArrayAdapter<ShopItem> {
         //Set button tags
         Button buyButton = (Button) row.findViewById(R.id.addChart);
         buyButton.setTag(position);
+        buyButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                String [] names = getContext().getResources().getStringArray(R.array.productNames);
+                int [] prices = getContext().getResources().getIntArray(R.array.productPrices);
+                TypedArray imgs = getContext().getResources().obtainTypedArray(R.array.productImages);
+
+                Context context = getContext();
+                Toast toast = Toast.makeText(context, getContext().getResources().getString(R.string.bought) + names[(int)v.getTag()], Toast.LENGTH_SHORT);
+                toast.show();
+                initializeChart();
+                if (!((AndroShopping) getContext().getApplicationContext()).chartList.searchItem(names[(int)v.getTag()])){
+                    ((AndroShopping) getContext().getApplicationContext()).chartList.addItem(new ChartItem(names[(int)v.getTag()], prices[(int)v.getTag()], imgs.getResourceId((int)v.getTag(),0)));
+                    //To ensure TypedArray functionality
+                    imgs.recycle();
+                }
+            }
+        });
         Button viewButton = (Button) row.findViewById(R.id.viewProduct);
         viewButton.setTag(position);
+        viewButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                String [] names = getContext().getResources().getStringArray(R.array.productNames);
+                String [] descriptions = getContext().getResources().getStringArray(R.array.productDescriptions);
+                int [] prices = getContext().getResources().getIntArray(R.array.productPrices);
+                TypedArray imgs = getContext().getResources().obtainTypedArray(R.array.productImages);
+
+                Intent i = new Intent(getContext().getApplicationContext(), ViewProductActivity.class);
+                i.putExtra("productName",names[(int) v.getTag()]);
+                i.putExtra("productDescription",descriptions[(int) v.getTag()]);
+                i.putExtra("productPrice",prices[(int) v.getTag()]);
+                i.putExtra("productImg",imgs.getResourceId((int)v.getTag(),0));
+                //To ensure TypedArray functionality
+                imgs.recycle();
+
+                getContext().startActivity(i);
+            }
+        });
         return row;
+    }
+
+    public void initializeChart(){
+        if (((AndroShopping) getContext().getApplicationContext()).chartList == null) {
+            ((AndroShopping) getContext().getApplicationContext()).chartList = new ChartItemAdapter(getContext());
+        }
     }
 }
