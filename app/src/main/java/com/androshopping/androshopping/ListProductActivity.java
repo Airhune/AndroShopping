@@ -36,13 +36,6 @@ public class ListProductActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
 
-        /*Button addButton = (Button)findViewById(R.id.addChart);
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-        });*/
-
-
         Button buyButton = (Button)findViewById(R.id.buyProducts);
         buyButton.setOnClickListener(new View.OnClickListener() {
             @Override

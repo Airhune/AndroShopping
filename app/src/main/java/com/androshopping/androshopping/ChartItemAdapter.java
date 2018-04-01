@@ -57,16 +57,15 @@ public class ChartItemAdapter extends ArrayAdapter<ChartItem> {
     public View getView(int position, View convertView, ViewGroup parent) {
         View row = convertView;
         if (row == null) {
-            //Log.d("DEBUG", "Starting Row Inflation ... ");
+
             LayoutInflater inflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = inflater.inflate(R.layout.chart_view_row, parent, false);
             row.setClickable(true);
             row.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    //aqui puedes poner si quieres que haga algo cuando clicas la linea, no los botones.
                 }
             });
-            //Log.d("DEBUG", "Successfully completed Row Inflation!");
+
         }
         // Get item
         String name = getItem(position).name;
