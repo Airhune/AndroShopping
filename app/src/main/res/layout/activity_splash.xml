@@ -14,13 +14,14 @@
         android:layout_width="100dp"
         android:layout_centerHorizontal="true"
         android:layout_height="100dp"
-        android:src="@mipmap/android_os"/>
+        android:src="@mipmap/android_os1"/>
 
     <TextView
         android:layout_below="@id/icon"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:textSize="30sp"
+        android:textColor="@color/colorDarkGrey"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name" />
