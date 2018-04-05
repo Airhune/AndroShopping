@@ -16,7 +16,7 @@
     <string name="quantity">\u0020\u0020Q:\u0020</string>
     <string name="totalPrice">Total price:\u0020</string>
     <string name="textPrice">Price:\u0020</string>
-    <string name="compraCompleta">Compra realizada correctamente</string>
+    <string name="compraCompleta">Purchase completed successfully</string>
     <string name="bought">You bought a\u0020</string>
 
     <string name="basicInformationTitle">Basic Information</string>
